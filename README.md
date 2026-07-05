@@ -97,7 +97,7 @@ To verify independently: run `python3 tools/verify_dim_homogeneity.py` (check A2
 
 ## Audit methodology
 
-The argument structure audit tools used to develop and maintain these documents are in a separate repository: [argument-structure-audit](https://github.com/alan-sudoku/argument_structure_audit).
+The argument structure audit tools used to develop and maintain these documents are in a separate repository: [argument_structure_audit](https://github.com/alan-sudoku/argument_structure_audit).
 
 ---
 
