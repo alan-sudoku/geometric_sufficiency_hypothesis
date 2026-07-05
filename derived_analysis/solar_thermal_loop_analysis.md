@@ -7,7 +7,7 @@ description: Derivation of the T2 terrestrial ceiling and the 150°C sustained-d
 
 *Derived analysis staging document. Not a source document. Purpose: derive from the GSH framework (both documents) why T3 is disproportionately expensive on Earth relative to space, why T2 is the realistic ceiling for terrestrial $\mathcal{E}^*$ - constrained operation, and — critically — why the T1 sustained-delivery ceiling within $\mathcal{E}^*$ sits at ~150°C rather than the 300°C nominal figure. The 150°C finding is not commercially obvious: commercial solar collectors reach and exceed it using glass evacuation and steel structures that are outside $\mathcal{E}^*$. The derivation traces why four atmospheric constraints (§1.0 C1–C4) compound to produce this specific ceiling within $\mathcal{E}^*$ constraints, and what the GSH framework can and cannot claim below it. Candidate for addition to `geometric_sufficiency_hypothesis.md` §5 as a fourth Earth derivation example, or as a standalone linked appendix.*
 
-*Both documents required: this analysis uses tier definitions and physical reactions from `geometric_sufficiency_hypothesis.md` H:§7 OQ-GSH.7 and cost accounting mechanisms from `GSH_mathematical_inventory.md` M:§1.6, M:§3.1.*
+*Both documents required: this analysis uses tier definitions and physical reactions from [geometric_sufficiency_hypothesis.md](geometric_sufficiency_hypothesis.md) H:§7 OQ-GSH.7 and cost accounting mechanisms from [GSH_mathematical_inventory.md](GSH_mathematical_inventory.md) M:§1.6, M:§3.1.*
 
 ---
 
