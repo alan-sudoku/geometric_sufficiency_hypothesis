@@ -5,7 +5,7 @@ description: Every retracted claim from geometric_sufficiency_hypothesis.md — 
 
 # The Geometric Sufficiency Hypothesis — Retraction Log
 
-Every retracted claim from `geometric_sufficiency_hypothesis.md`. The log is the negative channel of the document — what was probed and found structurally defective after adversarial audit. It carries boundary information: what the hypothesis cannot claim constrains what it can claim.
+Every retracted claim from [geometric_sufficiency_hypothesis.md](geometric_sufficiency_hypothesis.md). The log is the negative channel of the document — what was probed and found structurally defective after adversarial audit. It carries boundary information: what the hypothesis cannot claim constrains what it can claim.
 
 **Entry format:** ID · Source · Date · Audit trigger · Why retracted · Exact retracted content · What replaces it · Exploration value
 

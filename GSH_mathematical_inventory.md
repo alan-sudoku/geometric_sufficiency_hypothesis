@@ -9,7 +9,7 @@ description: Formula bodies, symbol glossaries, dimensional obligations, and ver
 
 ---
 
-*Epistemic markers *(D)*, *(H)*, *(C)*, *(OQ)* follow the same scheme as `geometric_sufficiency_hypothesis.md` — see H:§0 epistemic status key.*
+*Epistemic markers *(D)*, *(H)*, *(C)*, *(OQ)* follow the same scheme as [geometric_sufficiency_hypothesis.md](geometric_sufficiency_hypothesis.md)  — see H:§0 epistemic status key.*
 
 ## Computability tier index
 

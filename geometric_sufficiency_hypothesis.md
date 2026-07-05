@@ -6,7 +6,7 @@ description: "A minimum-cardinality element set satisfies any engineering requir
 # The Geometric Sufficiency Hypothesis (GSH)
 ## A minimum-cardinality element set satisfies any engineering requirement set through geometric arrangement *(Hypothesis)*
 
-*v0.82 · Retraction log: `geometric_sufficiency_hypothesis_retraction.md`*
+*v0.82 · Retraction log: [geometric_sufficiency_hypothesis_retraction.md](geometric_sufficiency_hypothesis_retraction.md)*
 
 ## Preamble
 

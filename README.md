@@ -85,8 +85,8 @@ To verify independently: run `python3 tools/verify_dim_homogeneity.py` (check A2
 
 | File | Content |
 | :--- | :--- |
-| `element_derivation_process.md` | Elimination trace for $\mathcal{E}^*(\mathcal{F}_{\mathrm{space}})$ — space engineering context. Records which elements were eliminated at which criterion and why. Computable counterpart: `derive_element_set.py`. |
-| `solar_thermal_loop_analysis.md` | Application of Axiom II and the $\Sigma$ inequality to a solar thermal loop — tests a specific subsystem against the framework. Computed numbers are transcluded from `solar_thermal_loop_computed.md`; never edit them by hand. |
+| [element_derivation_process.md](derived_analysis/element_derivation_process.md) | Elimination trace for $\mathcal{E}^*(\mathcal{F}_{\mathrm{space}})$ — space engineering context. Records which elements were eliminated at which criterion and why. Computable counterpart: `derive_element_set.py`. |
+| [solar_thermal_loop_analysis.md](derived_analysis/solar_thermal_loop_analysis.md) | Application of Axiom II and the $\Sigma$ inequality to a solar thermal loop — tests a specific subsystem against the framework. Computed numbers are transcluded from `solar_thermal_loop_computed.md`; never edit them by hand. |
 | `solar_thermal_loop_calc.py` | Authoritative arithmetic for `solar_thermal_loop_analysis.md` — all Layer 0 constants, §4.4/§4.7/§4.8/§4.10/§4.11 calculations using sympy exact rationals. Run `python3 solar_thermal_loop_calc.py` to regenerate `solar_thermal_loop_computed.md`. |
 | `solar_thermal_loop_computed.md` | Generated file — do not edit by hand. Produced by `solar_thermal_loop_calc.py`. Carries `unlisted: true` for Quartz transclusion. |
 | `derive_element_set.py` | Applies the criteria hierarchy computationally over a 26-element library with deployment constants fixed at $\tau = 100\,\text{yr}$, $T_0 = 250\,\text{K}$. Produces $\Sigma$ comparison numbers where T1-computable. |
