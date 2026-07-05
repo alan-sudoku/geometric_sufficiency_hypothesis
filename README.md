@@ -46,8 +46,8 @@ All scripts are in `tools/`. Run from the repository root with `python3 tools/<s
 
 | Script | What it checks | Exit 0 condition |
 | :--- | :--- | :--- |
-| `verify_gsh_math.py` | 20 algebraic checks (SymPy): crossover formula, regime coverage, Carnot chain, TUR cumulative form, Gibbs bound, Axiom II per-mole basis | All 20 pass |
-| `verify_dim_homogeneity.py` | Dimensional homogeneity of all M:§8.4 chains (A, B, C, Axiom II, DH gate) using SI base dimensions | All 14 checks pass |
+| `verify_gsh_math.py` | 35 algebraic checks (SymPy): crossover formula, regime coverage, Carnot chain, TUR cumulative form, Gibbs bound, Axiom II per-mole basis | All 35 pass |
+| `verify_dim_homogeneity.py` | Dimensional homogeneity of all M:§8.4 chains (A, B, C, Axiom II, DH gate) using SI base dimensions | All 15 checks pass |
 | `fe_crossover_numeric.py` | Numeric Fe/Al crossover τ* from Szargut + ISO 9223 data | Prints τ* interval; no assertion failures |
 
 ---
