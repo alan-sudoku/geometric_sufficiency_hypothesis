@@ -24,10 +24,10 @@ Four axioms define the element inclusion constraints: Axiom I (minimum cardinali
 The mathematical floor of the hypothesis — dimensional homogeneity of all entropy chains, algebraic structure of the crossover formula, and the Fe/Al Earth instance of the core inequality — is verified by three independent Python scripts using SymPy and public materials data (Szargut 1988; ISO 9223). The general computation of $\Sigma_g$ for arbitrary element-geometry pairs remains an open research problem (OQ-GSH.1); the scripts verify the mathematical floor without closing that gap.
 
 Four open challenges bound the current element set: 
-    - Challenge A: Whether ferromagnetism has a geometric substitute at ambient temperature within $\mathcal{E}^*$ (magnetism gap, the hypothesis's hardest open question and a candidate context-scoped falsification).
-    - Challenge B: Whether Turing-complete computation at engineering scale is achievable without chemical dopants.
-    - Challenge C: Whether the refractory ceiling can be exceeded within $\mathcal{E}^*$
-    - Challenge D: Whether a single alkali metal suffices for all alkali-dependent requirements. Resolution of any challenge changes $\mathcal{E}^*$ or narrows the hypothesis's claim scope.
+- Challenge A: Whether ferromagnetism has a geometric substitute at ambient temperature within $\mathcal{E}^*$ (magnetism gap, the hypothesis's hardest open question and a candidate context-scoped falsification).
+- Challenge B: Whether Turing-complete computation at engineering scale is achievable without chemical dopants.
+- Challenge C: Whether the refractory ceiling can be exceeded within $\mathcal{E}^*$
+- Challenge D: Whether a single alkali metal suffices for all alkali-dependent requirements. Resolution of any challenge changes $\mathcal{E}^*$ or narrows the hypothesis's claim scope.
 
 ## Keywords
 
