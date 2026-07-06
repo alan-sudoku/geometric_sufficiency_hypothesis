@@ -118,7 +118,9 @@ Earth's atmosphere imposes four independent physical constraints on solar therma
 
 A receiver at temperature $T_\text{rec}$ in atmospheric air loses heat continuously via convection:
 
-$$\dot{Q}_\text{conv} = h \cdot A \cdot (T_\text{rec} - T_\text{amb})$$
+$$
+\dot{Q}_\text{conv} = h \cdot A \cdot (T_\text{rec} - T_\text{amb})
+$$
 
 where $h$ is the convective heat transfer coefficient (roughly $10$–$50\ \text{W}\cdot\text{m}^{-2}\cdot\text{K}^{-1}$ in still air; higher under wind). At $T_\text{rec} = 800°C$, $T_\text{amb} = 25°C$, $A = 1\ \text{m}^2$: $\dot{Q}_\text{conv} \approx 8$–$40\ \text{kW}$ — continuously.
 
@@ -152,8 +154,12 @@ In space (vacuum): no O₂, no N₂. C and SiC are stable. Al remains passivated
 
 High-temperature thermal storage in $\mathcal{E}^*$ requires Na/K eutectic (melting point ~−12°C, usable to ~800°C). Na and K react with atmospheric O₂ and N₂:
 
-$$4\text{Na} + \text{O}_2 \to 2\text{Na}_2\text{O} \quad \text{(vigorous above 100°C)}$$
-$$2\text{Na} + \text{N}_2 \to \text{Na}_3\text{N} \quad \text{(at elevated temperature)}$$
+$$
+4\text{Na} + \text{O}_2 \to 2\text{Na}_2\text{O} \quad \text{(vigorous above 100°C)}
+$$
+$$
+2\text{Na} + \text{N}_2 \to \text{Na}_3\text{N} \quad \text{(at elevated temperature)}
+$$
 
 The storage medium degrades on contact with atmosphere. A large-scale Na/K thermal storage system must be hermetically sealed from atmosphere at all times — including during filling, maintenance, and emergency venting. This is the same containment problem as CO management at T3, applied to the storage infrastructure. The two problems compound if both are present in the same system.
 
@@ -171,7 +177,9 @@ Direct Normal Irradiance (DNI) is the only usable fraction for high-concentratio
 
 The theoretical maximum concentration ratio for a non-imaging 2D concentrator on Earth is:
 
-$$C_\text{max,2D} = \frac{1}{\sin^2 \theta_s} \approx 46000$$
+$$
+C_\text{max,2D} = \frac{1}{\sin^2 \theta_s} \approx 46000
+$$
 
 - $\theta_s \approx 0.27°$ — solar half-angle (angular radius of the solar disc as seen from Earth); sets the étendue limit for any concentrating geometry
 
@@ -212,7 +220,9 @@ No single constraint makes T3 impossible on Earth. All four together make it a f
 
 **Operative $\Sigma_g$ form (M:§1.6 passive regime):**
 
-$$\Sigma_g^{T1} = \Sigma_{g,\text{mfg}}^{T1} = \frac{W_{\text{irreversible,fab}}^{T1}}{T_0^{\text{fab}}}$$
+$$
+\Sigma_g^{T1} = \Sigma_{g,\text{mfg}}^{T1} = \frac{W_{\text{irreversible,fab}}^{T1}}{T_0^{\text{fab}}}
+$$
 
 Manufacturing entropy only — no maintenance term. $W_{\text{irreversible,fab}}^{T1}$ is the exergy of Al sheet forming and surface finishing for the CPC reflectors (Gutowski 2009 data). One-time cost, amortised over $\tau$.
 
@@ -237,7 +247,9 @@ The gap between current commercial T2 (outside $\mathcal{E}^*$) and $\mathcal{E}
 
 **Operative $\Sigma_g$ form:**
 
-$$\Sigma_g^{T2} = \Sigma_{g,\text{mfg}}^{T2} + \Sigma_{g,\text{mech}}^{T2}(\tau)$$
+$$
+\Sigma_g^{T2} = \Sigma_{g,\text{mfg}}^{T2} + \Sigma_{g,\text{mech}}^{T2}(\tau)
+$$
 
 where $\Sigma_{g,\text{mech}}^{T2}$ is the mechanical maintenance entropy from tracking drive fatigue over $\tau$ (wear term: $\int_0^\tau F_f(t) \cdot v(t) / T_0\, dt$ per M:§1.6 OQ-GSH.23).
 
@@ -261,13 +273,17 @@ where $\Sigma_{g,\text{mech}}^{T2}$ is the mechanical maintenance entropy from t
 
 The T3 reaction is:
 
-$$\text{SiO}_2 + 2\text{C} \to \text{Si} + 2\text{CO} \quad \text{(spontaneous above} \sim 1500°C\text{)}$$
+$$
+\text{SiO}_2 + 2\text{C} \to \text{Si} + 2\text{CO} \quad \text{(spontaneous above} \sim 1500°C\text{)}
+$$
 
 CO is toxic and flammable. On Earth at atmospheric pressure, operating this reaction in an open solar concentrator geometry is not feasible — CO accumulates and must be actively managed. The BT4 definition above (§1) states this explicitly: *"suppression to pure Al requires controlled CO atmosphere or arc furnace conditions — neither is available without additional process control in an open solar concentrator geometry."* The same constraint applies at T3 for the SiO₂ reaction.
 
 CO management requires a sealed reaction chamber, CO recovery loop, and pressure control — none of which is required at T1 or T2. This is a discrete step-change in $\Sigma_g$:
 
-$$\Sigma_g^{T3} = \Sigma_{g,\text{mfg}}^{T3} + \Sigma_{g,\text{CO-mgmt}}^{T3} + \Sigma_{g,\text{mech}}^{T3}(\tau)$$
+$$
+\Sigma_g^{T3} = \Sigma_{g,\text{mfg}}^{T3} + \Sigma_{g,\text{CO-mgmt}}^{T3} + \Sigma_{g,\text{mech}}^{T3}(\tau)
+$$
 
 $\Sigma_{g,\text{CO-mgmt}}^{T3}$ is not present at T1 or T2. It is the manufacturing and maintenance entropy of the sealed reaction chamber and CO handling loop — a qualitatively new infrastructure term.
 
@@ -289,13 +305,17 @@ Non-imaging CPC geometry reaches concentration ratios of roughly $C_{\max} = 1/\
 
 This means T3 on Earth within $\mathcal{E}^*$ is blocked not just by CO management but by a fundamental optical geometry constraint: the concentrator class that reaches T3 temperatures (imaging) is different from the concentrator class within $\mathcal{E}^*$ (non-imaging CPC). This is a third independent new cost — or more precisely, a new geometry class with its own $\Sigma_{g,\text{mfg}}$ that has not been demonstrated within $\mathcal{E}^*$.
 
-$$\Sigma_g^{T3} = \Sigma_{g,\text{mfg}}^{T3} + \Sigma_{g,\text{CO-mgmt}}^{T3} + \Sigma_{g,\text{imaging-optics}}^{T3} + \Sigma_{g,\text{mech}}^{T3}(\tau)$$
+$$
+\Sigma_g^{T3} = \Sigma_{g,\text{mfg}}^{T3} + \Sigma_{g,\text{CO-mgmt}}^{T3} + \Sigma_{g,\text{imaging-optics}}^{T3} + \Sigma_{g,\text{mech}}^{T3}(\tau)
+$$
 
 In space (vacuum): CO disperses, no atmospheric scattering, no convective loss. A non-imaging passive reflector can reach T3 temperatures with a much smaller collector — $\Sigma_{g,\text{CO-mgmt}}$ and $\Sigma_{g,\text{imaging-optics}}$ both collapse to zero.
 
 **$T_0$ context mismatch (M:§1.6 OQ-GSH.19):** If the T3 concentrator is manufactured on Earth (where $T_0^{\text{fab}} = 298\ \text{K}$) and deployed in space (where $T_0^{\text{deploy}} \approx 250\ \text{K}$), the dominance test uses:
 
-$$\Sigma_{g,\text{mfg}}^{\text{deploy}} = \Sigma_{g,\text{mfg}}^{\text{fab}} \cdot \frac{T_0^{\text{fab}}}{T_0^{\text{deploy}}} = \Sigma_{g,\text{mfg}}^{\text{fab}} \cdot \frac{298}{250} \approx 1.19 \cdot \Sigma_{g,\text{mfg}}^{\text{fab}}$$
+$$
+\Sigma_{g,\text{mfg}}^{\text{deploy}} = \Sigma_{g,\text{mfg}}^{\text{fab}} \cdot \frac{T_0^{\text{fab}}}{T_0^{\text{deploy}}} = \Sigma_{g,\text{mfg}}^{\text{fab}} \cdot \frac{298}{250} \approx 1.19 \cdot \Sigma_{g,\text{mfg}}^{\text{fab}}
+$$
 
 A 19% upward correction on manufacturing entropy when normalising to deployment context. This applies to T3 Earth-manufactured concentrators deployed in space — but the reverse direction (space-manufactured concentrators deployed on Earth) does not arise in this analysis.
 
@@ -305,7 +325,9 @@ A 19% upward correction on manufacturing entropy when normalising to deployment 
 
 T4 (>2000°C) adds a third independent cost jump: the carbothermic Al₂O₃ route requires:
 
-$$\text{Al}_2\text{O}_3 + 3\text{C} \to 2\text{Al} + 3\text{CO} \quad \text{(feasible above} \sim 2000°C\text{)}$$
+$$
+\text{Al}_2\text{O}_3 + 3\text{C} \to 2\text{Al} + 3\text{CO} \quad \text{(feasible above} \sim 2000°C\text{)}
+$$
 
 with the additional constraint that the $\text{Al}_4\text{C}_3$ intermediate above ~1400°C must be suppressed to yield pure Al — requiring controlled CO atmosphere or arc furnace conditions. T4 is explicitly outside current $\mathcal{E}^*$ Earth capability without W infrastructure (Challenge C, H:§6).
 
@@ -693,7 +715,9 @@ The NH₃ path converts the H₂ storage problem into an ammonia synthesis probl
 
 The on-demand path adds no storage $\Sigma_g$ but couples generation to demand temporally. The NaAlH₄ path adds:
 
-$$\Sigma_g^{\text{storage}} = \Sigma_{g,\text{mfg}}^{\text{hydride-vessel}} + \Sigma_{g,\text{mfg}}^{\text{charge-system}} + \Sigma_{g,\text{maint}}^{\text{seal}}(\tau)$$
+$$
+\Sigma_g^{\text{storage}} = \Sigma_{g,\text{mfg}}^{\text{hydride-vessel}} + \Sigma_{g,\text{mfg}}^{\text{charge-system}} + \Sigma_{g,\text{maint}}^{\text{seal}}(\tau)
+$$
 
 All three terms are passive-regime or low-maintenance — no active control required beyond periodic pressure management. The manufacturing terms are computable from Gutowski data; the seal maintenance term is the same class as the Na/K storage seal problem (C3 in Section 1.0) but at much lower operating temperature and therefore lower severity.
 
@@ -754,7 +778,9 @@ The multi-step path is not chosen for efficiency; it is chosen because:
 
 The relevant comparison is not $\eta_{\text{T1} \to \text{H}_2} / \eta_{\text{T2} \to \text{direct}}$ but rather the combined figure:
 
-$$\frac{\Sigma_g^{T1\to H_2}}{\text{useful output per unit } \tau} \quad \text{vs} \quad \frac{\Sigma_g^{T2\to\text{direct}} + \Sigma_g^{\text{research}}}{\text{useful output per unit } \tau}$$
+$$
+\frac{\Sigma_g^{T1\to H_2}}{\text{useful output per unit } \tau} \quad \text{vs} \quad \frac{\Sigma_g^{T2\to\text{direct}} + \Sigma_g^{\text{research}}}{\text{useful output per unit } \tau}
+$$
 
 The T2 path has higher $\eta$ but $\Sigma_g^{\text{research}}$ is a real cost that does not appear in the $\Sigma_g$ formula. The T1 → H₂ path has lower $\eta$ but all terms are T1-computable.
 
@@ -878,7 +904,9 @@ Thermal storage is the simplest path for a T1 heat-only application: no conversi
 
 **$\Sigma_g$ form for thermal storage:**
 
-$$\Sigma_g^{\text{thermal-store}} = \Sigma_{g,\text{mfg}}^{\text{vessel}} + \Sigma_{g,\text{insulation}}^{\text{mfg}}$$
+$$
+\Sigma_g^{\text{thermal-store}} = \Sigma_{g,\text{mfg}}^{\text{vessel}} + \Sigma_{g,\text{insulation}}^{\text{mfg}}
+$$
 
 The insulation term is significant: thermal storage only works if standby heat loss is low. Within $\mathcal{E}^*$, the insulation candidates are aerogel (Si, O — borderline), mineral wool (Si, Al, O — borderline), or vacuum-panel geometry (no fill material — $\mathcal{E}^*$ compatible but manufacturing-intensive). A thick mineral wool wrap is the practical $\mathcal{E}^*$ option; standby loss ~5–10% per 24 hours at 150°C — manageable for diurnal buffering.
 
@@ -948,7 +976,9 @@ Mechanical storage includes gravitational (pumped hydro, raised mass), kinetic (
 
 Every storage form adds terms to the dominance test denominator — they extend the useful output of the system but also increase the total $\Sigma_g$ investment. The crossover condition $\tau^*$ is recalculated with storage included:
 
-$$\Sigma_g^{\text{total}} = \Sigma_{g,\text{mfg}}^{\text{CPC}} + \Sigma_{g,\text{mfg}}^{\text{storage}} + \Sigma_{g,\text{maint}}^{\text{storage}}(\tau) + \text{[conversion chain terms if applicable]}$$
+$$
+\Sigma_g^{\text{total}} = \Sigma_{g,\text{mfg}}^{\text{CPC}} + \Sigma_{g,\text{mfg}}^{\text{storage}} + \Sigma_{g,\text{maint}}^{\text{storage}}(\tau) + \text{[conversion chain terms if applicable]}
+$$
 
 The hierarchy above is ordered by increasing $\Sigma_g$ per kWh stored — on-demand is cheapest, NH₃/H₂ seasonal is most expensive. No storage form within $\mathcal{E}^*$ is blocked outright; the operative open conditions are Na-ion cathode $\mathcal{E}^*$ status and NH₃ electrochemical synthesis route.
 
@@ -979,7 +1009,9 @@ Nodes 4–6 are addressed here.
 
 Every storage form has a discharge efficiency $\eta_\text{dis}$ and a discharge $\Sigma_g$ cost. Together with the charge efficiency $\eta_\text{chg}$, the round-trip efficiency (RTE) is:
 
-$$\text{RTE} = \eta_\text{chg} \cdot \eta_\text{dis}$$
+$$
+\text{RTE} = \eta_\text{chg} \cdot \eta_\text{dis}
+$$
 
 ![[solar_thermal_loop_computed#round-trip-efficiencies]]
 
@@ -989,7 +1021,9 @@ $$\text{RTE} = \eta_\text{chg} \cdot \eta_\text{dis}$$
 
 **$\Sigma_g$ consequence of extraction:** Extraction adds a rate term to the full $\Sigma_g$ accounting for any non-passive storage form:
 
-$$\Sigma_g^{\text{extract}}(\tau) = \Sigma_{g,\text{maint}}^{\text{discharge-equipment}}(\tau) + \Sigma_{g,\text{degrade}}^{\text{storage-medium}}(\tau)$$
+$$
+\Sigma_g^{\text{extract}}(\tau) = \Sigma_{g,\text{maint}}^{\text{discharge-equipment}}(\tau) + \Sigma_{g,\text{degrade}}^{\text{storage-medium}}(\tau)
+$$
 
 For pressurised water: this term is small (pump and valve wear). For NaAlH₄: Ti catalyst is a discrete consumption event (replace or replenish at a cycle interval — OQ-GSH.15 class). For Na-ion: capacity fade is a continuous degradation term.
 
@@ -1063,7 +1097,9 @@ The low η of the electrical path (~8% to motor) does not disqualify it — the 
 
 For a complete T1 system delivering multiple output types from a single CPC array:
 
-$$\Sigma_g^{\text{full}} = \underbrace{\Sigma_{g,\text{mfg}}^{\text{CPC}}}_{\text{collector}} + \underbrace{\Sigma_{g,\text{mfg}}^{\text{storage}} + \Sigma_{g,\text{maint}}^{\text{storage}}(\tau)}_{\text{storage}} + \underbrace{\Sigma_{g,\text{mfg}}^{\text{conversion}} + \Sigma_{g,\text{maint}}^{\text{conversion}}(\tau)}_{\text{ORC/electrolyser if present}} + \underbrace{\Sigma_{g,\text{mfg}}^{\text{dist}} + \Sigma_{g,\text{maint}}^{\text{dist}}(\tau)}_{\text{distribution if non-zero}} + \underbrace{\Sigma_{g,\text{mfg}}^{\text{terminal}}}_{\text{end-use equipment}}$$
+$$
+\Sigma_g^{\text{full}} = \underbrace{\Sigma_{g,\text{mfg}}^{\text{CPC}}}_{\text{collector}} + \underbrace{\Sigma_{g,\text{mfg}}^{\text{storage}} + \Sigma_{g,\text{maint}}^{\text{storage}}(\tau)}_{\text{storage}} + \underbrace{\Sigma_{g,\text{mfg}}^{\text{conversion}} + \Sigma_{g,\text{maint}}^{\text{conversion}}(\tau)}_{\text{ORC/electrolyser if present}} + \underbrace{\Sigma_{g,\text{mfg}}^{\text{dist}} + \Sigma_{g,\text{maint}}^{\text{dist}}(\tau)}_{\text{distribution if non-zero}} + \underbrace{\Sigma_{g,\text{mfg}}^{\text{terminal}}}_{\text{end-use equipment}}
+$$
 
 The co-located direct thermal path collapses this to two terms: CPC manufacturing + terminal heat exchanger. Every additional node adds terms. The dominance test must be satisfied at the total $\Sigma_g^{\text{full}}$, not at any single component.
 
@@ -1077,7 +1113,9 @@ The T1 chain analysis above assumes a location with commercially viable DNI. Thi
 
 The dominance test requires $\Sigma_g(\mathcal{G}, \tau) < \Sigma_s(x, \tau)$. The left side ( $\Sigma_g$) is determined partly by collector area, which scales with required aperture. Required aperture scales inversely with DNI:
 
-$$A_\text{required} = \frac{E_\text{demand}}{\eta_\text{opt} \cdot \text{DNI} \cdot t_\text{solar}}$$
+$$
+A_\text{required} = \frac{E_\text{demand}}{\eta_\text{opt} \cdot \text{DNI} \cdot t_\text{solar}}
+$$
 
 Lower DNI or fewer solar hours → larger $A$ → larger $\Sigma_{g,\text{mfg}}^{\text{CPC}}$. The right side ( $\Sigma_s$) is independent of location for the same element and environment. Therefore τ* — the crossover lifetime — is location-sensitive: the same element that GSH predicts should be retained in a sunny climate may fail the dominance test in a low-insolation climate without a longer operative τ or additional storage.
 
@@ -1107,7 +1145,9 @@ This has three GSH consequences:
 
 Below ~400 kWh/m²/yr DNI, the required collector aperture for household-scale demand (8 MWh/yr thermal) at $\eta_\text{opt} = 0.70$ reaches:
 
-$$A = \frac{E_\text{demand}}{\eta_\text{opt} \cdot \text{DNI}_\text{polar}}$$
+$$
+A = \frac{E_\text{demand}}{\eta_\text{opt} \cdot \text{DNI}_\text{polar}}
+$$
 
 ![[solar_thermal_loop_computed#geographic-dni-scaling]]
 
@@ -1125,7 +1165,9 @@ At latitudes above ~65°N (N. Norway, Iceland, N. Canada), commercial solar ther
 
 The location modifier enters the dominance test as a scaling factor on $\Sigma_{g,\text{mfg}}^{\text{CPC}}$:
 
-$$\Sigma_{g,\text{mfg}}^{\text{CPC}}(\text{location}) = \Sigma_{g,\text{mfg}}^{\text{CPC,ref}} \cdot \frac{\text{DNI}_\text{ref}}{\text{DNI}_\text{location}}$$
+$$
+\Sigma_{g,\text{mfg}}^{\text{CPC}}(\text{location}) = \Sigma_{g,\text{mfg}}^{\text{CPC,ref}} \cdot \frac{\text{DNI}_\text{ref}}{\text{DNI}_\text{location}}
+$$
 
 where DNI$_\text{ref}$ is the reference latitude (e.g., southern Spain, 2000 kWh/m²/yr). Computed multipliers per location are shown in [[solar_thermal_loop_computed#geographic-dni-scaling]] above.
 
@@ -1160,7 +1202,9 @@ Let $\tau_d$ be the time of a destructive event. The dominance test outcome depe
 
 The practical consequence: disaster risk converts the deterministic τ in the dominance test into a stochastic quantity. The relevant operative τ is not the design lifetime but the **expected τ** weighted by the probability of early truncation:
 
-$$\tau_\text{eff} = \int_0^{\tau_\text{life}} \tau \cdot p(\text{survive to } \tau) \, d\tau$$
+$$
+\tau_\text{eff} = \int_0^{\tau_\text{life}} \tau \cdot p(\text{survive to } \tau) \, d\tau
+$$
 
 where $p(\text{survive to } \tau)$ is the survival probability as a function of local disaster hazard. For most mid-latitude temperate locations, $\tau_\text{eff} \approx \tau_\text{life}$ — disaster probability per year is low enough that the integral converges close to the design lifetime. For high-hazard locations (seismic zone, cyclone corridor), $\tau_\text{eff}$ may be substantially shorter than $\tau_\text{life}$, shifting the effective τ* threshold upward.
 
@@ -1207,7 +1251,9 @@ Each of these adds a site-specific modifier to the τ_life estimate in §4.5. Th
 
 The maintenance term $\Sigma_{g,\text{maint}}(\tau)$ already captures scheduled maintenance. For disaster-hazard locations, an additional expected repair term appears:
 
-$$\Sigma_{g,\text{repair}}(\tau) = \lambda_d \cdot \Sigma_{g,\text{rebuild}} \cdot \tau$$
+$$
+\Sigma_{g,\text{repair}}(\tau) = \lambda_d \cdot \Sigma_{g,\text{rebuild}} \cdot \tau
+$$
 
 - $\lambda_d$ — annual disaster event rate for the deployment location; $\mathrm{yr}^{-1}$; site-specific external input, not a formula property of the inventory
 - $\Sigma_{g,\text{rebuild}}$ — per-event repair entropy; $\mathrm{J}\cdot\mathrm{K}^{-1}$; the entropy cost of restoring the system to operational state after a single disaster event
@@ -1721,11 +1767,15 @@ flowchart TD
 
 **Σg consequence of the design programme:** if OD-1 + OD-3 + OD-4 + OD-6 all pass, the next-generation system adds:
 
-$$\Sigma_g^{\text{next-gen}} = \Sigma_{g,\text{mfg}}^{\text{CPC}} + \Sigma_{g,\text{mfg}}^{\text{tracking}} + \Sigma_{g,\text{mfg}}^{\text{cover}} + \Sigma_{g,\text{mfg}}^{\text{selective-absorber}} + \Sigma_{g,\text{mfg}}^{\text{pressure-vessel}} + \Sigma_{g,\text{maint}}^{\text{tracking}}(\tau) + \Sigma_{g,\text{maint}}^{\text{absorber-recoat}}(\tau)$$
+$$
+\Sigma_g^{\text{next-gen}} = \Sigma_{g,\text{mfg}}^{\text{CPC}} + \Sigma_{g,\text{mfg}}^{\text{tracking}} + \Sigma_{g,\text{mfg}}^{\text{cover}} + \Sigma_{g,\text{mfg}}^{\text{selective-absorber}} + \Sigma_{g,\text{mfg}}^{\text{pressure-vessel}} + \Sigma_{g,\text{maint}}^{\text{tracking}}(\tau) + \Sigma_{g,\text{maint}}^{\text{absorber-recoat}}(\tau)
+$$
 
 compared to the current T1 system:
 
-$$\Sigma_g^{\text{current}} = \Sigma_{g,\text{mfg}}^{\text{CPC}}$$
+$$
+\Sigma_g^{\text{current}} = \Sigma_{g,\text{mfg}}^{\text{CPC}}
+$$
 
 The additional terms push τ* outward. Whether 200°C sustained delivery generates enough additional $\Sigma_s$ reduction (through unlocked utilities 13–14) to satisfy the dominance condition at the new τ* is the quantitative design question — computable from Gutowski data once OD-1 through OD-6 are characterised.
 

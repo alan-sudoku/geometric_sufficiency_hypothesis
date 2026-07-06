@@ -236,7 +236,9 @@ Before any computation is described, symbols must be partitioned into two classe
 
 **Source:** [→ `geometric_sufficiency_hypothesis.md` H:§1 "Argument ( $\Sigma$ trade-off)"]; M:§2 Axiom I; M:§4 intro
 
-$$\Sigma_g(\mathcal{G}, \tau) < \Sigma_s(x, \tau)$$
+$$
+\Sigma_g(\mathcal{G}, \tau) < \Sigma_s(x, \tau)
+$$
 
 **Reading:** Element $x$ is removed from $\mathcal{E}$ when a geometric arrangement $\mathcal{G}$ exists such that the precision entropy of $\mathcal{G}$ is lower than the supply-chain entropy of retaining $x$.
 
@@ -251,7 +253,9 @@ $$\Sigma_g(\mathcal{G}, \tau) < \Sigma_s(x, \tau)$$
 
 **Infrastructure amortization scope (OQ-GSH.24):** $\Sigma_s(x, \tau)$ as defined captures the per-product supply-chain entropy — extraction, processing, and recycling for the product element set $\mathcal{E}^*$. It does not include the embodied material cost of the manufacturing infrastructure ( $\mathcal{E}^*_{\mathrm{infra}}$) that produces the geometric substitute. The full per-product supply-chain entropy is:
 
-$$\Sigma_{s,\mathrm{total}}(x, \tau) = \Sigma_{s,\mathrm{direct}}(x, \tau) + \frac{\Sigma_s(\mathcal{E}^*_{\mathrm{infra}}, \tau_{\mathrm{infra}})}{N_{\mathrm{products}}}$$
+$$
+\Sigma_{s,\mathrm{total}}(x, \tau) = \Sigma_{s,\mathrm{direct}}(x, \tau) + \frac{\Sigma_s(\mathcal{E}^*_{\mathrm{infra}}, \tau_{\mathrm{infra}})}{N_{\mathrm{products}}}
+$$
 
 - $\Sigma_{s,\mathrm{total}}(x, \tau)$: full per-product supply-chain entropy including amortized infrastructure — $\mathrm{J}\cdot\mathrm{K}^{-1}$; lower bound on true cost when $N_{\mathrm{products}}$ is finite; approaches $\Sigma_{s,\mathrm{direct}}$ as $N_{\mathrm{products}} \to \infty$
 - $\Sigma_{s,\mathrm{direct}}(x, \tau)$: per-product supply-chain entropy excluding manufacturing infrastructure — $\mathrm{J}\cdot\mathrm{K}^{-1}$; the quantity used in the core inequality; a lower bound on the true cost
@@ -291,20 +295,26 @@ For large $N_{\mathrm{products}}$ the amortized term approaches zero, providing 
 
 **Definitions (exact by construction):**
 
-$$\Sigma_s(\mathcal{E}^*, \tau) = \int_0^\tau \dot{S}_{\mathrm{gen,supply}}(\mathcal{E}^*)\,dt$$
+$$
+\Sigma_s(\mathcal{E}^*, \tau) = \int_0^\tau \dot{S}_{\mathrm{gen,supply}}(\mathcal{E}^*)\,dt
+$$
 
 - $\Sigma_s(\mathcal{E}^*, \tau)$: cumulative supply-chain entropy of element set $\mathcal{E}^*$ over lifetime $\tau$ — $\mathrm{J}\cdot\mathrm{K}^{-1}$
 - $\dot{S}_{\mathrm{gen,supply}}(\mathcal{E}^*)$: entropy generation rate of the supply chain for $\mathcal{E}^*$ — $\mathrm{J}\cdot\mathrm{K}^{-1}\cdot\mathrm{s}^{-1}$, $\geq 0$ by second law
 - $\tau$: operational lifetime — s
 
-$$\Sigma_g(\mathcal{G}, \tau) = \int_0^\tau \dot{S}_{\mathrm{gen,maintenance}}(\mathcal{G})\,dt$$
+$$
+\Sigma_g(\mathcal{G}, \tau) = \int_0^\tau \dot{S}_{\mathrm{gen,maintenance}}(\mathcal{G})\,dt
+$$
 
 - $\Sigma_g(\mathcal{G}, \tau)$: cumulative maintenance entropy of geometric arrangement $\mathcal{G}$ over lifetime $\tau$ — $\mathrm{J}\cdot\mathrm{K}^{-1}$
 - $\dot{S}_{\mathrm{gen,maintenance}}(\mathcal{G})$: entropy generation rate of maintaining $\mathcal{G}$ against degradation — $\mathrm{J}\cdot\mathrm{K}^{-1}\cdot\mathrm{s}^{-1}$, $\geq 0$ by second law
 
 **Minimisation objective:**
 
-$$\min_{\mathcal{E}^*, \mathcal{G}} \int_{0}^{\tau} \left( \dot{S}_{\mathrm{gen,supply}}(\mathcal{E}^*) + \dot{S}_{\mathrm{gen,maintenance}}(\mathcal{G}) \right) dt$$
+$$
+\min_{\mathcal{E}^*, \mathcal{G}} \int_{0}^{\tau} \left( \dot{S}_{\mathrm{gen,supply}}(\mathcal{E}^*) + \dot{S}_{\mathrm{gen,maintenance}}(\mathcal{G}) \right) dt
+$$
 
 - Minimisation is over both $\mathcal{E}^*$ (element set, combinatorial) and $\mathcal{G}$ (geometric arrangement, continuous) jointly
 
@@ -368,7 +378,9 @@ $$\min_{\mathcal{E}^*, \mathcal{G}} \int_{0}^{\tau} \left( \dot{S}_{\mathrm{gen,
 
 The minimum entropy required to maintain configuration $\mathcal{G}$ at resolution $r$ against thermal noise over $\tau$:
 
-$$\Sigma_g^{\min}(\mathcal{G}, r, \tau) \geq k_B \ln(\Omega_{\mathcal{G}}) \cdot \frac{\tau}{\tau_{\mathrm{thermal}}}$$
+$$
+\Sigma_g^{\min}(\mathcal{G}, r, \tau) \geq k_B \ln(\Omega_{\mathcal{G}}) \cdot \frac{\tau}{\tau_{\mathrm{thermal}}}
+$$
 
 - $\Sigma_g^{\min}$: minimum achievable maintenance entropy for $\mathcal{G}$ — $\mathrm{J}\cdot\mathrm{K}^{-1}$
 - $k_B$: Boltzmann constant — $1.381 \times 10^{-23} \ \mathrm{J}\cdot\mathrm{K}^{-1}$
@@ -380,14 +392,16 @@ $$\Sigma_g^{\min}(\mathcal{G}, r, \tau) \geq k_B \ln(\Omega_{\mathcal{G}}) \cdot
 
 The minimum supply-chain entropy floor for element $x$, bounded below by the Gibbs free energy of refining $x$ from its most dilute available source at operating temperature $T$, normalised to $\tau$. **Naming note:** this quantity is labelled $\Sigma_s^{\max}$ because it serves as the upper ceiling on *how cheap* the supply chain can be — used by the dominance test to disqualify geometric substitution when even the best-case supply chain is cheaper than the cheapest geometry. It is not a ceiling on how expensive the actual supply chain is (real processes exceed $\Delta G / T$; they can be arbitrarily less efficient). The conservative direction is correct: underestimating $\Sigma_s$ (using the thermodynamic minimum) makes the dominance test harder to satisfy for geometric substitution, biasing toward retention. **Code consumer warning:** any automated implementation that reads $\Sigma_s^{\max}$ as a conventional upper bound on supply-chain cost and applies the dominance inequality without reading this naming note will produce the wrong inequality direction — $\Sigma_g^{\min} > \Sigma_s^{\max}$ disqualifies geometry (geometry too expensive), which is the correct logic only when $\Sigma_s^{\max}$ is understood as the cheapness ceiling, not a cost ceiling.
 
-$$\Sigma_s^{\max}(x, \tau) \leq \frac{\Delta G_{\mathrm{refine}}(x)}{T} \cdot f(\tau) \cdot n(x, \tau)$$
+$$
+\Sigma_s^{\max}(x, \tau) \leq \frac{\Delta G_{\mathrm{refine}}(x)}{T} \cdot f(\tau) \cdot n(x, \tau)
+$$
 
 - $\Delta G_{\mathrm{refine}}(x)$: Gibbs free energy of refining $x$ from its most dilute available source — $\mathrm{J}\cdot\mathrm{mol}^{-1}$
 - $T$: operating temperature — $\mathrm{K}$
 - $n(x, \tau)$: total moles of element $x$ consumed in the supply chain over $\tau$ — mol; required for dimensional closure from $\mathrm{J}\cdot\mathrm{mol}^{-1}\cdot\mathrm{K}^{-1}$ to $\mathrm{J}\cdot\mathrm{K}^{-1}$ *(D)*
 - $f(\tau)$: dimensionless scaling factor capturing how many refining cycles occur over $\tau$; candidate form $\tau / \tau_{\mathrm{cycle}}$ where $\tau_{\mathrm{cycle}}$ is the refining cycle period (the time for one complete ore-to-refined-element processing cycle — distinct from the recycling cycle period $\tau_{\mathrm{recovery}}$ in M:§2.2) — open, see the Gibbs upper bound requirement below (OQ-GSH.18 — $f(\tau)$ undefined)
-- *Bound behaviour as $\tau \to \infty$: $f(\tau) \to \infty$ implies no finite Gibbs upper bound holds at infinite horizon — the bound is only operative for finite $\tau$ with a defined $\tau_{\mathrm{cycle}}$*
-- *Recycling credit and f(τ): the $f(\tau)$ scaling charges the full refining cost per cycle, as if each cycle draws from raw ore with no recycling credit. This is the worst-case upper bound — the actual $\Sigma_s$ under Axiom II with $\eta_{\mathrm{recycle}} \geq 99.9\%$ is substantially lower. The conservative direction is intentional: overestimating $\Sigma_s^{\max}$ biases the dominance test toward element retention, which is the correct error direction (false retention is recoverable; false removal is not). Do not read $f(\tau)$ as a double-counting of the recycling obligation — it is the no-recycling ceiling, not the operative cost.*
+- Bound behaviour as $\tau \to \infty$: $f(\tau) \to \infty$ implies no finite Gibbs upper bound holds at infinite horizon — the bound is only operative for finite $\tau$ with a defined $\tau_{\mathrm{cycle}}$
+- Recycling credit and f(τ): the $f(\tau)$ scaling charges the full refining cost per cycle, as if each cycle draws from raw ore with no recycling credit. This is the worst-case upper bound — the actual $\Sigma_s$ under Axiom II with $\eta_{\mathrm{recycle}} \geq 99.9\%$ is substantially lower. The conservative direction is intentional: overestimating $\Sigma_s^{\max}$ biases the dominance test toward element retention, which is the correct error direction (false retention is recoverable; false removal is not). Do not read $f(\tau)$ as a double-counting of the recycling obligation — it is the no-recycling ceiling, not the operative cost.
 
 *Unit trace:* $[\mathrm{J}\cdot\mathrm{mol}^{-1}\cdot\mathrm{K}^{-1}] \cdot [1] \cdot [\mathrm{mol}] = [\mathrm{J}\cdot\mathrm{K}^{-1}]$
 
@@ -405,7 +419,9 @@ $$\Sigma_s^{\max}(x, \tau) \leq \frac{\Delta G_{\mathrm{refine}}(x)}{T} \cdot f(
 1. *(Resolved — active regime; passive scope explicit; $\Omega_\mathcal{G}$ definition open)* **Boltzmann-Shannon bound derivation and scope:**
 
    The bound $k_B \ln(\Omega_{\mathcal{G}}) \cdot \tau/\tau_{\mathrm{thermal}}$ is derived via the generalised Landauer principle. To maintain configuration $\mathcal{G}$ against thermal fluctuations at rate $1/\tau_{\mathrm{thermal}}$, the minimum entropy generation rate is:
-   $$\dot{S}_{\mathrm{gen,maintenance}}(t) \geq \frac{k_B \ln(\Omega_{\mathcal{G}}(t))}{\tau_{\mathrm{thermal}}}$$
+   $$
+   \dot{S}_{\mathrm{gen,maintenance}}(t) \geq \frac{k_B \ln(\Omega_{\mathcal{G}}(t))}{\tau_{\mathrm{thermal}}}
+   $$
    - $\dot{S}_{\mathrm{gen,maintenance}}(t)$: instantaneous entropy generation rate for maintaining $\mathcal{G}$ against thermal fluctuations at time $t$ — $\mathrm{W}\cdot\mathrm{K}^{-1}$ ( $\mathrm{J}\cdot\mathrm{K}^{-1}\cdot\mathrm{s}^{-1}$); $\geq 0$ by second law; integrates to $\Sigma_g^{\min}$ over $\tau$ (see integrated form above)
    - $\Omega_\mathcal{G}(t)$: phase-space partition ratio at time $t$ — dimensionless; time-varying as the Hamiltonian shifts with structural degradation; static integer form is the approximation used when the energy landscape is stationary [→ OQ-GSH.17]
    - $\tau_{\mathrm{thermal}}$: characteristic thermal fluctuation timescale — s; deployment-fixed; $= k_B T_0 / u_{\mathrm{attempt}}$
@@ -419,7 +435,9 @@ $$\Sigma_s^{\max}(x, \tau) \leq \frac{\Delta G_{\mathrm{refine}}(x)}{T} \cdot f(
 
    - *Sustained-current steady state* (continuous driving force maintains configuration against noise without discrete measurement-feedback cycles — e.g., dynamic electromagnetic traps, powered non-equilibrium assemblies): the Thermodynamic Uncertainty Relation (Barato & Seifert 2015) gives a cumulative lower bound tighter than Sagawa-Ueda for this sub-regime:
 
-     $$\Sigma_g^{\min}(\mathcal{G}, \tau) \geq \frac{2 k_B}{\epsilon^2}$$
+     $$
+     \Sigma_g^{\min}(\mathcal{G}, \tau) \geq \frac{2 k_B}{\epsilon^2}
+     $$
 
      - $k_B$: Boltzmann constant — $\mathrm{J}\cdot\mathrm{K}^{-1}$; $= 1.380649 \times 10^{-23}\,\mathrm{J}\cdot\mathrm{K}^{-1}$
      - $\epsilon^2$: squared coefficient of variation of configuration transitions — dimensionless; $= \operatorname{Var}(X(\tau)) / \langle X(\tau) \rangle^2$; denominator of the TUR bound; $\epsilon^2 > 0$ by definition
@@ -439,7 +457,9 @@ $$\Sigma_s^{\max}(x, \tau) \leq \frac{\Delta G_{\mathrm{refine}}(x)}{T} \cdot f(
 
    **Manufacturing entropy derivation (passive regime):** For passive macro structures where $\Sigma_{g,\mathrm{maintenance}} \approx 0$, the operative $\Sigma_g$ is the one-time manufacturing cost $\Sigma_{g,\mathrm{mfg}}$ — valid when $\tau \leq \tau_{\mathrm{wearout}}$ (the geometric substitute's structural lifespan). For $\tau > \tau_{\mathrm{wearout}}$, the substitute requires periodic replacement and the operative cost is $\lceil \tau / \tau_{\mathrm{wearout}} \rceil \cdot \Sigma_{g,\mathrm{mfg}}$. The manufacturing cost is not a fluctuation theorem quantity — it is derived from process exergy: the irreversible work expended in fabrication operations (machining, joining, forming, heat treatment) normalised to entropy units by
 
-   $$\Sigma_{g,\mathrm{mfg}} = \frac{W_{\mathrm{irreversible,fab}}}{T_0^{\mathrm{fab}}}$$
+   $$
+   \Sigma_{g,\mathrm{mfg}} = \frac{W_{\mathrm{irreversible,fab}}}{T_0^{\mathrm{fab}}}
+   $$
 
    - $\Sigma_{g,\mathrm{mfg}}$: one-time manufacturing entropy of the geometric substitute — $\mathrm{J}\cdot\mathrm{K}^{-1}$; operative $\Sigma_g$ in the passive regime when $\tau \leq \tau_{\mathrm{wearout}}$; for $\tau > \tau_{\mathrm{wearout}}$ multiply by $\lceil \tau / \tau_{\mathrm{wearout}} \rceil$
    - $W_{\mathrm{irreversible,fab}}$: exergy consumed by fabrication beyond minimum thermodynamic work for the same transformation — J; $\geq 0$; sources: Gutowski *et al.* (2009) for machining and forming; Szargut (2005) for phase transformations
@@ -461,7 +481,9 @@ $$\Sigma_s^{\max}(x, \tau) \leq \frac{\Delta G_{\mathrm{refine}}(x)}{T} \cdot f(
 2. *(Open)* **Gibbs bound — $f(\tau)$ undefined:** $\Delta G / T$ has units $\mathrm{J}\cdot\mathrm{K}^{-1}$ — correct for entropy. $f(\tau)$ is not defined in `geometric_sufficiency_hypothesis.md`; requires explicit form (e.g., $\tau / \tau_{\mathrm{cycle}}$ — number of refining cycles over $\tau$).
 
 3. *(Open — OQ-GSH.17)* **$\Omega_{\mathcal{G}}$ definition:** $\Omega_{\mathcal{G}}$ is not a fixed integer — it is a Boltzmann-weighted phase-space partition ratio:
-   $$\Omega_{\mathcal{G}}(T, r) = \frac{\int_{\Gamma_{\mathrm{mis}}(r)} e^{-H/k_BT}\,dp\,dq}{\int_{\Gamma_{\mathrm{correct}}(r)} e^{-H/k_BT}\,dp\,dq}$$
+   $$
+   \Omega_{\mathcal{G}}(T, r) = \frac{\int_{\Gamma_{\mathrm{mis}}(r)} e^{-H/k_BT}\,dp\,dq}{\int_{\Gamma_{\mathrm{correct}}(r)} e^{-H/k_BT}\,dp\,dq}
+   $$
    - $H$: Hamiltonian of arrangement $\mathcal{G}$ — J; total energy as a function of phase-space coordinates; not generally computable [→ OQ-GSH.17]
    - $\Gamma_{\mathrm{mis}}(r)$: phase-space region of misconfigured states of $\mathcal{G}$ at resolution $r$ — set; boundary between $\Gamma_{\mathrm{mis}}$ and $\Gamma_{\mathrm{correct}}$ is the open problem in OQ-GSH.17
    - $\Gamma_{\mathrm{correct}}(r)$: phase-space region of correctly-configured states — set; partition complement of $\Gamma_{\mathrm{mis}}(r)$ in accessible phase space; $r$-dependent
@@ -472,11 +494,15 @@ $$\Sigma_s^{\max}(x, \tau) \leq \frac{\Delta G_{\mathrm{refine}}(x)}{T} \cdot f(
 
 The general affine cost model for any element–substitute pair is:
 
-$$\Sigma_s(\tau) = \Sigma_{s,\mathrm{initial}} + \dot{\Sigma}_s \cdot \tau \qquad \Sigma_g(\tau) = \Sigma_{g,\mathrm{mfg}} + \dot{\Sigma}_g \cdot \tau$$
+$$
+\Sigma_s(\tau) = \Sigma_{s,\mathrm{initial}} + \dot{\Sigma}_s \cdot \tau \qquad \Sigma_g(\tau) = \Sigma_{g,\mathrm{mfg}} + \dot{\Sigma}_g \cdot \tau
+$$
 
 *→ The model linearises both cost curves; the pipeline decision reduces to comparing intercepts and slopes to determine whether a crossover lifetime* $\tau^*$*exists and, if so, its sign and magnitude.*
 
-$$\tau^* = \frac{\Sigma_{s,\mathrm{initial}} - \Sigma_{g,\mathrm{mfg}}}{\dot{\Sigma}_g - \dot{\Sigma}_s}$$
+$$
+\tau^* = \frac{\Sigma_{s,\mathrm{initial}} - \Sigma_{g,\mathrm{mfg}}}{\dot{\Sigma}_g - \dot{\Sigma}_s}
+$$
 
 - $\Sigma_{s,\mathrm{initial}}$: $\tau$-independent initial supply-chain entropy — $\mathrm{J}\cdot\mathrm{K}^{-1}$
 - $\Sigma_{g,\mathrm{mfg}}$: one-time manufacturing entropy of the substitute — $\mathrm{J}\cdot\mathrm{K}^{-1}$
@@ -505,7 +531,9 @@ Four regimes follow from the signs of the intercept difference $(\Sigma_{s,\math
 
 **Trigger condition:**
 
-$$\Sigma_{\mathrm{AI}}(\tau_{\mathrm{search}}) \geq \Sigma_s(x, \tau)$$
+$$
+\Sigma_{\mathrm{AI}}(\tau_{\mathrm{search}}) \geq \Sigma_s(x, \tau)
+$$
 
 - $\Sigma_{\mathrm{AI}}(\tau_{\mathrm{search}})$: cumulative entropy generated by the AI search process over elapsed search duration $\tau_{\mathrm{search}}$ — $\mathrm{J}\cdot\mathrm{K}^{-1}$
 - $\tau_{\mathrm{search}}$: elapsed search duration — s; distinct from operational lifetime $\tau$; for pre-deployment search $\tau_{\mathrm{search}} \ll \tau$, for edge-deployed agents $\tau_{\mathrm{search}}$ may approach $\tau$
@@ -567,7 +595,9 @@ See M:§1.3 (core inequality). Axiom I is the rule; the inequality is its operat
 
 **Hard gap exception:**
 
-$$\Sigma_g(\mathcal{G}, \tau) \to \infty \text{ for all } \mathcal{G} \Rightarrow x \in \mathcal{E}^* \text{ unconditionally}$$
+$$
+\Sigma_g(\mathcal{G}, \tau) \to \infty \text{ for all } \mathcal{G} \Rightarrow x \in \mathcal{E}^* \text{ unconditionally}
+$$
 
 - $\forall \mathcal{G}$: universal quantifier over all geometric arrangements of current $\mathcal{E}^*$ members — the search space is all physically realisable configurations at any scale; the quantifier is asserted, not computed
 - $\Sigma_g(\mathcal{G}, \tau) \to \infty$: no finite maintenance entropy suffices — the functional requirement invokes a property (nuclear cross-section, electron work function, bond enthalpy) absent from all $\mathcal{E}^*$ members at any arrangement
@@ -591,7 +621,9 @@ This occurs when the functional requirement depends on a fundamental constant of
 
 *(i) Thermodynamic condition:*
 
-$$\Delta G_{\mathrm{recovery}}(x) \leq \frac{\eta_{\mathrm{ex}} \cdot \dot{Q}_{\mathrm{ambient}} \cdot \tau_{\mathrm{recovery}}}{n_{\mathrm{rec}}(x)}$$
+$$
+\Delta G_{\mathrm{recovery}}(x) \leq \frac{\eta_{\mathrm{ex}} \cdot \dot{Q}_{\mathrm{ambient}} \cdot \tau_{\mathrm{recovery}}}{n_{\mathrm{rec}}(x)}
+$$
 
 - $\Delta G_{\mathrm{recovery}}(x)$: Gibbs free energy of the recovery reaction for element $x$ — $\mathrm{J}\cdot\mathrm{mol}^{-1}$
 - $\eta_{\mathrm{ex}}$: exergy efficiency of the ambient-flux-to-chemical-work conversion — dimensionless, $0 < \eta_{\mathrm{ex}} \leq 1$; bounded above by $\eta_{\mathrm{theoretical}}$: Landsberg limit ( $\approx 0.93$) for solar radiation, Carnot limit for thermal gradients, quantum efficiency for photochemical pathways *[→ OQ-GSH.32]*
@@ -605,7 +637,9 @@ $$\Delta G_{\mathrm{recovery}}(x) \leq \frac{\eta_{\mathrm{ex}} \cdot \dot{Q}_{\
 
 *(ii) Kinetic condition:*
 
-$$v_{\mathrm{recovery}}(x, T_{\mathrm{operating}}, \mathcal{E}^*) \geq v_{\min}(\mathcal{G}, \tau)$$
+$$
+v_{\mathrm{recovery}}(x, T_{\mathrm{operating}}, \mathcal{E}^*) \geq v_{\min}(\mathcal{G}, \tau)
+$$
 
 - $v_{\mathrm{recovery}}$: reaction rate of the recovery pathway — $\mathrm{mol}\cdot\mathrm{s}^{-1}$ or equivalent
 - $T_{\mathrm{operating}}$: operating temperature achievable within $\mathcal{E}^*$ using gradient-derived energy
@@ -630,7 +664,9 @@ Problem-specific. Requires either experimental verification or an established ca
 
 **Deferred debt ( $\mathrm{Fe}$ case):**
 
-$$\Sigma_{\mathrm{rec}}(\mathrm{Fe}) = \frac{\text{energy to recover } \mathrm{Fe}_2\mathrm{O}_3 / \mathrm{Fe}_3\mathrm{O}_4 \text{ at decommissioning}}{T}$$
+$$
+\Sigma_{\mathrm{rec}}(\mathrm{Fe}) = \frac{\text{energy to recover } \mathrm{Fe}_2\mathrm{O}_3 / \mathrm{Fe}_3\mathrm{O}_4 \text{ at decommissioning}}{T}
+$$
 
 - $T$: temperature at decommissioning context — $\mathrm{K}$; normalises energy to entropy units ( $\mathrm{J}\cdot\mathrm{K}^{-1}$)
 
@@ -657,7 +693,9 @@ Condition (ii): Axiom II recyclability test applied to all reaction products.
 
 **Gradient Locality — Cycle Closure [→ `geometric_sufficiency_hypothesis.md` H:§2 Axiom III scope note]:**
 
-$$\int_{0}^{T_{\mathrm{gradient}}} \dot{B}_{\mathrm{store}}(t)\,dt \geq 0$$
+$$
+\int_{0}^{T_{\mathrm{gradient}}} \dot{B}_{\mathrm{store}}(t)\,dt \geq 0
+$$
 
 - $\dot{B}_{\mathrm{store}}(t)$: rate of change of stored exergy relative to dead state $(T_0, P_0)$ — $\mathrm{W}$ ( $\mathrm{J}\cdot\mathrm{s}^{-1}$)
 - $T_{\mathrm{gradient}}$: natural period of the primary environmental gradient — $\mathrm{s}$; diurnal ( $\approx 86{,}400\ \mathrm{s}$), orbital, or tidal depending on deployment context
@@ -679,7 +717,9 @@ $$\int_{0}^{T_{\mathrm{gradient}}} \dot{B}_{\mathrm{store}}(t)\,dt \geq 0$$
 
 **Hard gap condition (operative):**
 
-$$\forall \mathcal{G}: \Sigma_g(\mathcal{G}, \tau) \to \infty \Rightarrow \text{hard gap}$$
+$$
+\forall \mathcal{G}: \Sigma_g(\mathcal{G}, \tau) \to \infty \Rightarrow \text{hard gap}
+$$
 
 - $\forall \mathcal{G}$: universal quantifier over all geometric arrangements constructible from current $\mathcal{E}^*$ members — same search space as M:§2.1
 - $\Sigma_g(\mathcal{G}, \tau) \to \infty$: no finite maintenance entropy suffices to realise the required functional outcome through arrangement alone — the property depends on an intrinsic constant of an absent element
@@ -711,7 +751,9 @@ The AI must compute $\Sigma_s(x, \tau)$ and compare against $\Sigma_g(\mathcal{G
 
 For a real industrial supply chain, $\dot{S}_{\mathrm{gen,supply}}$ is not a smooth continuous rate. It is a sequence of discrete process steps (extraction, refining, transport, manufacturing). The continuous integral collapses to a sum of exergy losses over those steps:
 
-$$\Sigma_s(x, \tau) \approx \sum_{i} \frac{W_{\mathrm{lost},i}(x)}{T_i} + \Sigma_{\mathrm{rec}}(x)$$
+$$
+\Sigma_s(x, \tau) \approx \sum_{i} \frac{W_{\mathrm{lost},i}(x)}{T_i} + \Sigma_{\mathrm{rec}}(x)
+$$
 
 - $W_{\mathrm{lost},i}(x)$: lost work (exergy destruction) at supply-chain process step $i$ for element $x$ — J; $\geq 0$; one term per step (extraction, refining, transport, manufacturing); sources: Szargut (1988) chemical exergy $b_{ch}(x)$; NIST/mp-api for $\Delta G_{\mathrm{refine}}$. **Proxy note:** for the extraction step, $b_{ch}(x)$ is used as the $W_{\mathrm{lost}}$ proxy — it is the minimum exergy drawn from gradient flux (Axiom III) to raise $x$ from the dead-state to its functional form. In a real extraction process $W_{\mathrm{lost,extraction}} \geq b_{ch}(x)$; using $b_{ch}$ gives the lower bound on extraction irreversibility. The per-step sum and the Fe operative form are consistent: $b_{ch}/T_0$ in the $\mathrm{Fe}$ formula is the extraction term of this sum evaluated at $T_0$.
 - $T_i$: process temperature at step $i$ — $\mathrm{K}$; local temperature at that step; not the deployment dead-state $T_0$ — refining steps typically operate at 800–$1600\,\mathrm{K}$ against $T_0 = 298\,\mathrm{K}$, so $T_i$ is not interchangeable with $T_0$ in entropy calculations
@@ -726,7 +768,9 @@ Data sources: Szargut (1988) standard chemical exergy $b_{ch}(x)$ for extraction
 
 For the Earth $\mathrm{Fe}$ instance the operative form is (implemented in `fe_crossover_numeric.py`):
 
-$$\Sigma_s(\mathrm{Fe}, \tau) = \frac{b_{ch}(\mathrm{Fe})}{T_0} + \frac{r_{\mathrm{corr}} \cdot \rho_{\mathrm{Fe}} \cdot |\Delta G_{\mathrm{ox}}|}{T_0 \cdot M_{\mathrm{Fe}}} \cdot A \cdot \tau + \Sigma_{\mathrm{rec}}(\mathrm{Fe})$$
+$$
+\Sigma_s(\mathrm{Fe}, \tau) = \frac{b_{ch}(\mathrm{Fe})}{T_0} + \frac{r_{\mathrm{corr}} \cdot \rho_{\mathrm{Fe}} \cdot |\Delta G_{\mathrm{ox}}|}{T_0 \cdot M_{\mathrm{Fe}}} \cdot A \cdot \tau + \Sigma_{\mathrm{rec}}(\mathrm{Fe})
+$$
 
 *Dimensional note:* The corrosion term carries units $\mathrm{J}\cdot\mathrm{m}^{-2}\cdot\mathrm{K}^{-1}$ before multiplication by surface area $A$ $[\mathrm{m}^2]$ — the per-unit-area factor is required for the total to reduce to $\mathrm{J}\cdot\mathrm{K}^{-1}$. $A$ is a deployment input (see M:§1.2); `fe_crossover_numeric.py` takes it as the `surface_area_m2` parameter (default $10\ \mathrm{m}^2$). An auditor comparing this formula to the code should verify $A$ is applied consistently.
 
@@ -748,11 +792,15 @@ $$\Sigma_s(\mathrm{Fe}, \tau) = \frac{b_{ch}(\mathrm{Fe})}{T_0} + \frac{r_{\math
 
 Find $\tau^*$ such that:
 
-$$\Sigma_s(\mathrm{Fe}, \tau^*) = \Sigma_g(\mathcal{G}_{\mathrm{sub}}, \tau^*)$$
+$$
+\Sigma_s(\mathrm{Fe}, \tau^*) = \Sigma_g(\mathcal{G}_{\mathrm{sub}}, \tau^*)
+$$
 
 where $\Sigma_s(\mathrm{Fe}, \tau)$ includes corrosion maintenance $r_{\mathrm{corr}} \cdot \tau$ and Axiom II recycling obligation $\Sigma_{\mathrm{rec}}(\mathrm{Fe})$:
 
-$$\Sigma_s(\mathrm{Fe}, \tau) = \Sigma_s^{\mathrm{extraction}}(\mathrm{Fe}) + r_{\mathrm{corr}} \cdot \tau + \Sigma_{\mathrm{rec}}(\mathrm{Fe})$$
+$$
+\Sigma_s(\mathrm{Fe}, \tau) = \Sigma_s^{\mathrm{extraction}}(\mathrm{Fe}) + r_{\mathrm{corr}} \cdot \tau + \Sigma_{\mathrm{rec}}(\mathrm{Fe})
+$$
 
 **Verification check:** Confirm that $r_{\mathrm{corr}} \cdot \tau$ has units of entropy ( $\mathrm{J}\cdot\mathrm{K}^{-1}$). If $r_{\mathrm{corr}}$ is a corrosion rate (e.g., mass loss per unit time), it must be converted to entropy rate via the Gibbs free energy of the oxidation reaction divided by temperature. The source does not state this conversion explicitly. *Resolved: `fe_crossover_numeric.py` implements the conversion chain — corrosion rate $[\mathrm{m}\cdot\mathrm{s}^{-1}] \times \rho_{\mathrm{Fe}} \rightarrow$ molar flux $\rightarrow \lvert \Delta G_{\mathrm{ox}} \rvert \rightarrow$ power $\rightarrow$ entropy rate $[\mathrm{W}\cdot\mathrm{K}^{-1}]$ — and populates the OQ-GSH.8 crossover formula with Szargut (1988) $b_{ch}$ values and ISO 9223 corrosion data. mp-api replacement targets are marked in that file.*
 
@@ -785,7 +833,9 @@ Criterion 1, Criterion 2, Criterion 3, Criterion 4 are hard boundary conditions.
 
 **Threshold derivation candidate (OQ-GSH.25):** The threshold follows from a geometric decay model. After $n = \tau / \tau_{\mathrm{cycle}}$ recycling cycles at recovery efficiency $\eta_{\mathrm{recycle}}$, the retained mass fraction is $\eta_{\mathrm{recycle}}^n$. The minimum efficiency to retain at least $(1 - \epsilon)$ of the original element inventory is:
 
-$$\eta_{\mathrm{recycle}}^{\min} = (1 - \epsilon)^{\tau_{\mathrm{cycle}} / \tau}$$
+$$
+\eta_{\mathrm{recycle}}^{\min} = (1 - \epsilon)^{\tau_{\mathrm{cycle}} / \tau}
+$$
 
 - $\eta_{\mathrm{recycle}}^{\min}$: minimum recovery efficiency per cycle to retain at least $(1-\epsilon)$ of element inventory over $n = \tau/\tau_{\mathrm{cycle}}$ cycles — dimensionless, $(0, 1]$; candidate replacement for the static $99.9\%$ threshold; not operative until OQ-GSH.25 resolves $\epsilon$ and $\tau_{\mathrm{cycle}}$ from $\mathcal{F}$
 - $\epsilon$: maximum allowable fractional material loss before the substitute fails $\mathcal{F}$ — dimensionless, $(0, 1)$; must be derived from $\mathcal{F}$, not stipulated; operative range depends on the specific requirement set
@@ -807,14 +857,18 @@ The ( $99.9\%$) threshold is recovered for $\epsilon = 0.10$, $\tau = 100\,\math
 
 **$\Sigma_s(\mathrm{Fe}, \tau)$ operative form (T1):**
 
-$$\Sigma_s(\mathrm{Fe}, \tau) = \Sigma_s^{\mathrm{extraction}}(\mathrm{Fe}) + r_{\mathrm{corr}}(\mathrm{Fe}) \cdot \tau + \Sigma_{\mathrm{rec}}(\mathrm{Fe})$$
+$$
+\Sigma_s(\mathrm{Fe}, \tau) = \Sigma_s^{\mathrm{extraction}}(\mathrm{Fe}) + r_{\mathrm{corr}}(\mathrm{Fe}) \cdot \tau + \Sigma_{\mathrm{rec}}(\mathrm{Fe})
+$$
 
 - $r_{\mathrm{corr}}(\mathrm{Fe})$: deployment-fixed corrosion rate from ISO 9223 data for the specific environment — near zero in vacuum; significant in corrosive environments. Not a classification gate — a budget input. **Kinetic model scope:** the linear $r_{\mathrm{corr}} \cdot \tau$ form assumes a constant penetration rate, which is a valid approximation for active corrosion of bare Fe in ISO 9223 conditions. It is not valid for self-passivating candidate elements (e.g., Cu, Zn, Al) evaluated at long τ — those follow parabolic or logarithmic kinetics, and applying a linear model would overstate their Σ_s. If a passivating element is the candidate under evaluation, the corrosion term requires a non-linear rate law.
 - $\Sigma_{\mathrm{rec}}(\mathrm{Fe})$: Axiom II recycling obligation; accrues from $t = 0$ regardless of decommissioning timing.
 
 **General inequality (operative test):**
 
-$$\Sigma_g(\mathcal{G}_{\mathrm{sub}}, \tau) < \Sigma_s(\mathrm{Fe}, \tau)$$
+$$
+\Sigma_g(\mathcal{G}_{\mathrm{sub}}, \tau) < \Sigma_s(\mathrm{Fe}, \tau)
+$$
 
 No scope condition on operating context — $r_{\mathrm{corr}}(\mathrm{Fe})$ encodes the environment. The inequality is evaluated for the specific $\mathcal{F}$, deployment context, and candidate substitute geometry.
 
@@ -826,7 +880,9 @@ No scope condition on operating context — $r_{\mathrm{corr}}(\mathrm{Fe})$ enc
 
 General form — element $x$ removed when:
 
-$$\Sigma_g(\mathcal{G}, \tau) < \Sigma_s(x, \tau)$$
+$$
+\Sigma_g(\mathcal{G}, \tau) < \Sigma_s(x, \tau)
+$$
 
 Same operative form as Axiom I. M:§4 makes explicit that the criteria are a first-pass filter; the inequality is the operative decision rule.
 
@@ -865,7 +921,9 @@ where $\mu_r$ is relative magnetic permeability. This is a hard gap under Axiom 
 
 Even if $\mathrm{K_3C_{60}}$ were to demonstrate ambient-temperature superconductivity, the $18\ \mathrm{K}$ operating point triggers an independent Axiom I cost comparison. The Carnot coefficient of performance for a refrigeration cycle between $T_c$ and $T_h$ is:
 
-$$\mathrm{COP_{Carnot}} = \frac{T_c}{T_h - T_c}$$
+$$
+\mathrm{COP_{Carnot}} = \frac{T_c}{T_h - T_c}
+$$
 
 - $T_c$: cold-reservoir temperature of the refrigeration cycle — $\mathrm{K}$; for the $\mathrm{K_3C_{60}}$ operating point: $18\,\mathrm{K}$; equivalent to $T_{\mathrm{operating}}$ for this specific candidate
 - $T_h$: hot-reservoir (ambient) temperature — $\mathrm{K}$; $298\,\mathrm{K}$ for Earth context; equal to $T_0$ (deployment dead-state) when the ambient is the heat sink
@@ -873,18 +931,24 @@ $$\mathrm{COP_{Carnot}} = \frac{T_c}{T_h - T_c}$$
 
 At $T_c = 18\ \mathrm{K}$, $T_h = 300\ \mathrm{K}$:
 
-$$\mathrm{COP_{Carnot}} = \frac{18}{300 - 18} = \frac{18}{282} \approx 0.064$$
+$$
+\mathrm{COP_{Carnot}} = \frac{18}{300 - 18} = \frac{18}{282} \approx 0.064
+$$
 
 This gives a work-to-cooling-load ratio:
 
-$$r_g = \frac{1}{\mathrm{COP_{Carnot}}} \approx 15.6 \cdot r_{\mathrm{thermal\ load}}$$
+$$
+r_g = \frac{1}{\mathrm{COP_{Carnot}}} \approx 15.6 \cdot r_{\mathrm{thermal\ load}}
+$$
 
 - $r_g$: work-to-cooling-load ratio — dimensionless; $= 1/\mathrm{COP_{Carnot}}$; the multiplier by which input work exceeds the thermal load removed; $\approx 15.6$ at $T_c = 18\,\mathrm{K}$, $T_h = 298\,\mathrm{K}$
 - $r_{\mathrm{thermal\ load}}$: normalised thermal heat load removed from the cold reservoir — dimensionless ratio; the fraction of total input power that becomes useful cooling at $T_c$; equals 1 when all input work goes to heat removal (no parasitic losses)
 
 For any practical thermal load, the cryogenic maintenance rate $\dot{\Sigma}_g$ exceeds the $\mathrm{Fe}$ degradation rate $\dot{\Sigma}_s(\mathrm{Fe})$ (established by COP = $0.064$ above: $\dot{\Sigma}_g \approx 15.6 \cdot \dot{\Sigma}_{s,\mathrm{thermal\ load}}$). The full crossover model includes both one-time and rate terms:
 
-$$\Sigma_s(\tau) = \Sigma_{s,\mathrm{initial}} + \dot{\Sigma}_s \cdot \tau \qquad \Sigma_g(\tau) = \Sigma_{g,\mathrm{mfg}} + \dot{\Sigma}_g \cdot \tau$$
+$$
+\Sigma_s(\tau) = \Sigma_{s,\mathrm{initial}} + \dot{\Sigma}_s \cdot \tau \qquad \Sigma_g(\tau) = \Sigma_{g,\mathrm{mfg}} + \dot{\Sigma}_g \cdot \tau
+$$
 
 - $\Sigma_{s,\mathrm{initial}}$: extraction entropy at $t = 0$ — $\mathrm{J}\cdot\mathrm{K}^{-1}$; $= b_{ch}(\mathrm{Fe})/T_0$ (Szargut 1988; T1)
 - $\dot{\Sigma}_s$: ongoing supply-chain entropy accumulation rate for $\mathrm{Fe}$ — $\mathrm{J}\cdot\mathrm{K}^{-1}\cdot\mathrm{s}^{-1}$; set by corrosion and processing rate in the deployment context
@@ -893,11 +957,15 @@ $$\Sigma_s(\tau) = \Sigma_{s,\mathrm{initial}} + \dot{\Sigma}_s \cdot \tau \qqua
 
 For any practical thermal load, the cryogenic maintenance rate $\dot{\Sigma}_g$ exceeds the $\mathrm{Fe}$ degradation rate $\dot{\Sigma}_s(\mathrm{Fe})$ (established by COP = $0.064$ above). The crossover time is:
 
-$$\tau^* = \frac{\Sigma_{s,\mathrm{initial}} - \Sigma_{g,\mathrm{mfg}}}{\dot{\Sigma}_g - \dot{\Sigma}_s}$$
+$$
+\tau^* = \frac{\Sigma_{s,\mathrm{initial}} - \Sigma_{g,\mathrm{mfg}}}{\dot{\Sigma}_g - \dot{\Sigma}_s}
+$$
 
 With $\dot{\Sigma}_g > \dot{\Sigma}_s$, the denominator is positive. For $\tau^* < 0$ — the cost boundary condition — the numerator must be negative, requiring:
 
-$$\Sigma_{g,\mathrm{mfg}} > \Sigma_{s,\mathrm{initial}}$$
+$$
+\Sigma_{g,\mathrm{mfg}} > \Sigma_{s,\mathrm{initial}}
+$$
 
 **Crossover outcome:**
 - $\tau^* > 0$, denominator $> 0$: finite crossover exists; cryogenic substitute cheaper below $\tau^*$, $\mathrm{Fe}$ cheaper above $\tau^*$ — only meaningful if $\tau^*$ is within operational planning horizon
@@ -1007,7 +1075,9 @@ The M:§6.5 V-conditions govern external inputs before pipeline execution begins
 
 Full question text in [→ `geometric_sufficiency_hypothesis.md` H:§7].
 
-$$\tau^* : \Sigma_s(\mathrm{Fe}, \tau^*) = \Sigma_g(\mathcal{G}_{\mathrm{sub}}, \tau^*)$$
+$$
+\tau^* : \Sigma_s(\mathrm{Fe}, \tau^*) = \Sigma_g(\mathcal{G}_{\mathrm{sub}}, \tau^*)
+$$
 
 *→ $\tau^*$ is the deployment lifetime at which $\mathrm{Fe}$ retention and geometric substitution are entropy-equivalent; it is the primary numeric output of `fe_crossover_numeric.py`.*
 
@@ -1041,7 +1111,9 @@ Full question text in [→ `geometric_sufficiency_hypothesis.md` H:§7].
 
 **Candidate third Axiom III condition:**
 
-$$\dot{S}_{\mathrm{gen}}(t) \leq \frac{\dot{Q}_{\mathrm{export}}}{T_{\mathrm{boundary}}}$$
+$$
+\dot{S}_{\mathrm{gen}}(t) \leq \frac{\dot{Q}_{\mathrm{export}}}{T_{\mathrm{boundary}}}
+$$
 
 - $\dot{Q}_{\mathrm{export}}$: radiant dissipation capacity of the local thermal environment — W; the maximum rate at which the system can reject heat to the boundary; deployment-fixed; $> 0$; in deep space, set by Stefan-Boltzmann radiation at the operating temperature
 - $T_{\mathrm{boundary}}$: temperature at the system boundary — $\mathrm{K}$; the thermal environment into which entropy is exported; deployment-fixed; equal to $T_0$ when the boundary is the dead-state environment
