@@ -149,7 +149,7 @@ Root cause: $S$ was allocated to the element set first; entropy was displaced to
 | Axiom II extensive form (M:§2.2) | LHS $\Delta G_{\text{recovery}}$ [J mol⁻¹] vs RHS $\dot{Q} \cdot \tau_{\text{recovery}}$ [J] — incommensurable | RHS divided by $n_{\text{rec}}(x)$ [mol]; both sides J mol⁻¹ |
 | TUR rate form (M:§1.6, M:§0) | $2k_B J^2 / (\operatorname{Var}/\langle X\rangle^2)$ → J K⁻¹ s⁻² | Barato-Seifert 2015 cumulative form: $2k_B / \epsilon^2$ → J K⁻¹ |
 
-**What replaces it:** Corrected formula bodies in M:§1.6 and M:§2.2 with inline unit traces marked ✓. M:§8.5 Chain C rewritten around the cumulative TUR form (nodes C1–C7); DH_GATE edge changed from dashed (conditional) to solid (confirmed). M:§0 tier table TUR row updated to cumulative form. New symbol rows $n(x,\tau)$, $n_{\text{rec}}(x)$, $X(\tau)$, $\epsilon^2$ added to M:§1.1 symbol table.
+**What replaces it:** Corrected formula bodies in M:§1.6 and M:§2.2. M:§8.5 Chain C rewritten around the cumulative TUR form (nodes C1–C7); DH_GATE edge changed from dashed (conditional) to solid (confirmed). M:§0 tier table TUR row updated to cumulative form. New symbol rows $n(x,\tau)$, $n_{\text{rec}}(x)$, $X(\tau)$, $\epsilon^2$ added to M:§1.1 symbol table.
 
 **New open condition registered:** OQ-GSH.26 — $X(\tau)$, $\langle X(\tau)\rangle$, $\operatorname{Var}(X(\tau))$ require definition for a specific $\mathcal{G}$ before the TUR bound is numerically usable. Companion to OQ-GSH.17 ( $\Omega_\mathcal{G}$ phase-space definition).
 
