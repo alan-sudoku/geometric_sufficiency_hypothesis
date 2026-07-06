@@ -1499,7 +1499,7 @@ The H-DFG topology is identical for any operating context. Only Layer 0 constant
 | $r_{\mathrm{corr}}(x)$ (L1, not L0) | ISO 9223 Earth values — non-zero for $\mathrm{Fe}$ | Zero in vacuum | Removes the dominant time-compounding term from $\Sigma_s(\mathrm{Fe}, \tau)$; $\tau^*(\mathrm{Fe})$ increases by $\Sigma_s^{\mathrm{extraction}} / r_{\mathrm{corr}}$ or ceases to exist as a finite crossover when the geometric substitute's manufacturing cost exceeds the supply-chain cost with no corrosion |
 | $\mathcal{A}_{\mathrm{ref}}$ (L1 abundance) | Earth crustal $\mathrm{ppm}$ | $\mathrm{C}$/$\mathrm{S}$/$\mathrm{M}$-type asteroid composition | Criterion 1 threshold and abundance value both change — different elements pass the filter |
 
-The space $\mathcal{E}^*$ result reported in [→ `derived_analysis/element_derivation_process.md`] $\mathrm{(C, Si, H, O, N, S, P, Na/K, Ca, Mg)}$ is the output of running the same H-DFG with the space column of L0.
+The space $\mathcal{E}^*$ result reported in [→ [element_derivation_process.md](derived_analysis/element_derivation_process.md)] $\mathrm{(C, Si, H, O, N, S, P, Na/K, Ca, Mg)}$ is the output of running the same H-DFG with the space column of L0.
 
 #### H-DFG design: context-dependency, dimensional reduction, open data requirements
 
