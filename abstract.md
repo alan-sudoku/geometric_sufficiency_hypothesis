@@ -35,7 +35,7 @@ geometric arrangement, minimum cardinality, engineering thermodynamics, supply-c
 
 ## Version
 
-v0.82 (`geometric_sufficiency_hypothesis.md`)
+v0.83 (`geometric_sufficiency_hypothesis.md`)
 
 ## License
 
