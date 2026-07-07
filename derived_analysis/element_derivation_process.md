@@ -237,7 +237,7 @@ This is the complete set for $\mathcal{F}_{\text{space}}$ as specified. *[→ OQ
 
 The space engineering derivation above is one context. $|\mathcal{E}^*|$ varies with deployment conditions; the criteria hierarchy produces a different survivor set for each.
 
-| Context | Adjustment | Estimated $|\mathcal{E}^*|$ |
+| Context | Adjustment | Estimated $\lvert\mathcal{E}^*\rvert$ |
 | :--- | :--- | :--- |
 | Space / 3–5 AU (this derivation) | Baseline above | 7 unambiguous + 4 conditional ( $\mathrm{Fe, N, Ti, Na/K)}$ |
 | Earth / terrestrial | Criterion 1 shifts to geological abundance ( $\mathrm{Si, Al, C, Na, K}$ abundant; $\mathrm{Ag}$ and $\mathrm{Pt}$ trace); physics gaps are secondary — primary challenge is the OQ-GSH.7 solar-thermal bootstrap loop | 8–10 ( $\mathrm{Ag}$/$\mathrm{Pt}$ substitution if trace mass is prohibitive) |
